@@ -1,0 +1,13 @@
+<VirtualHost *>
+    ServerName example.com
+
+    WSGIDaemonProcess www user=max group=max threads=5
+    WSGIScriptAlias / /home/frank/Development/udacity/deeplearning/part3/project/dog-project/upload_test/flask-upload.wsgi
+
+    <Directory /home/frank/Development/udacity/deeplearning/part3/project/dog-project/upload_test>
+        WSGIProcessGroup www
+        WSGIApplicationGroup %{GLOBAL}
+        Order deny,allow
+        Allow from all
+    </Directory>
+</VirtualHost>

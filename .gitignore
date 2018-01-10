@@ -9,3 +9,4 @@ saved_models/
 haarcascades/
 __pycache__/
 bottleneck_features/DogVGG16Data.npz
+dlFrank.pem
